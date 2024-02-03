@@ -1,0 +1,133 @@
+/* start global */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /*(paragraphs) */
+    --Very-light-gray : hsl(0, 0%, 95%);
+    /* (background, headings, buttons) */
+}
+
+body {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: hsl(0, 0%, 95%);
+    margin: 0 0 0 13%;
+}
+
+.cards {
+    width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 15.5rem));
+    margin: 0; 
+}
+
+.card1 {
+    width: 250px;
+    background-color: hsl(31, 77%, 52%);
+    padding: 2.5rem;
+    border-radius: 10px 0 0 10px
+}
+.card2 {
+    width: 250px; 
+    background-color: hsl(184, 100%, 22%);
+    padding: 2.5rem;
+    margin: 0;
+}
+.card3 {
+    width: 250px; 
+    background-color: hsl(179, 100%, 13%);
+    padding: 2.5rem;
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+}
+.titleCard {
+    padding: 1.5rem 2rem 1rem 0;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 400;
+}
+.textParagraph {
+    margin-bottom: 4rem;
+    color: var(--Transparent-white);
+    line-height: 1.5;
+  }
+.button1,
+.button2,
+.button3 {
+    width: 150px;
+    height: 50px;
+    border-radius: 3rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    border:2px solid white;
+}
+.button1 {
+    color:hsl(31, 77%, 52%);
+}
+.button1:hover {
+    background-color: hsl(31, 77%, 52%);
+    color:  hsla(0, 0%, 100%, 0.75);
+    cursor: pointer;
+}
+.button2{
+    margin-top: 20px;
+    color: hsl(184, 100%, 22%);
+}
+.button2:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(184, 100%, 22%);
+    cursor:pointer;
+}
+.button3 {
+    color: hsl(179, 100%, 13%);
+}
+.button3:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(179, 100%, 13%);
+    cursor: pointer;
+}
+.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    padding: 10px; 
+    background-color: hsl(0, 0%, 95%);
+}
+@media (max-width: 768px) { /* Media query per schermi piccoli */
+    .cards {
+      grid-template-columns: 1fr; /* Visualizza le card in colonna */
+      width: 100%; /* Occupa quasi l'intera larghezza dello schermo */
+      margin: 2rem 2rem 0 0; /* Centra le card orizzontalmente */
+    }
+  
+    .card1,
+    .card2,
+    .card3 {
+      width: 100%; /* Estendi la larghezza delle card per occupare la colonna */
+      height: auto;
+      border-radius: 0 0 0 0;
+    }
+    .button3 {
+        margin-bottom: 3rem;
+    }
+  }
+
+
+  
